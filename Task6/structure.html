@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Order Form</h1>
+        <form id="orderForm" action="">
+            <div class="wrap">
+                <h4 for="monitor">Choose Monitor:</h4>
+                <select id="monitor" name="monitor" required>
+                    <option value="" selected disabled>Choose a Monitor</option>
+                    <option value="blank">-</option>
+                    <option value="23 inch">23 inch</option>
+                    <option value="27 inch">27 inch</option>
+                </select>
+                <div class="quantity-container">
+                    <button type="button" class="quantity-modify decrease" data-target="monitorQuantity">-</button>
+                    <input type="number" class="quantity-input" id="monitorQuantity" name="monitorQuantity" value="1" min="1">
+                    <button type="button" class="quantity-modify increase" data-target="monitorQuantity">+</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <h4 for="cpu">Choose CPU:</h4>
+                <select id="cpu" name="cpu" required>
+                    <option value="" selected disabled>Choose a CPU</option>
+                    <option value="blank">-</option>
+                    <option value="Intel Core i9">Intel Core i9</option>
+                    <option value="AMD Ryzen 9">AMD Ryzen 9</option>
+                    <option value="Intel Core i7">Intel Core i7</option>
+                    <option value="AMD Ryzen 7">AMD Ryzen 7</option>
+                </select>
+                <div class="quantity-container">
+                    <button type="button" class="quantity-modify decrease" data-target="cpuQuantity">-</button>
+                    <input type="number" class="quantity-input" id="cpuQuantity" name="cpuQuantity" value="1" min="1">
+                    <button type="button" class="quantity-modify increase" data-target="cpuQuantity">+</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <h4 for="gpu">Choose GPU:</h4>
+                <select id="gpu" name="gpu" required>
+                    <option value="" selected disabled>Choose a GPU</option>
+                    <option value="blank">-</option>
+                    <option value="NVIDIA GeForce RTX 3080">NVIDIA GeForce RTX 3080</option>
+                    <option value="AMD Radeon RX 6800 XT">AMD Radeon RX 6800 XT</option>
+                    <option value="NVIDIA GeForce RTX 3070">NVIDIA GeForce RTX 3070</option>
+                    <option value="AMD Radeon RX 6700 XT">AMD Radeon RX 6700 XT</option>
+                </select>
+                <div class="quantity-container">
+                    <button type="button" class="quantity-modify decrease" data-target="gpuQuantity">-</button>
+                    <input type="number" class="quantity-input" id="gpuQuantity" name="gpuQuantity" value="1" min="1">
+                    <button type="button" class="quantity-modify increase" data-target="gpuQuantity">+</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <h4 for="ram">Choose RAM:</h4>
+                <select id="ram" name="ram" required>
+                    <option value="" selected disabled>Choose RAM</option>
+                    <option value="blank">-</option>
+                    <option value="16GB DDR4">16GB DDR4</option>
+                    <option value="32GB DDR4">32GB DDR4</option>
+                    <option value="64GB DDR4">64GB DDR4</option>
+                </select>
+                <div class="quantity-container">
+                    <button type="button" class="quantity-modify decrease" data-target="ramQuantity">-</button>
+                    <input type="number" class="quantity-input" id="ramQuantity" name="ramQuantity" value="1" min="1">
+                    <button type="button" class="quantity-modify increase" data-target="ramQuantity">+</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <h4 for="storage">Choose Storage:</h4>
+                <select id="storage" name="storage" required>
+                    <option value="" selected disabled>Choose Storage</option>
+                    <option value="blank">-</option>
+                    <option value="256GB SSD">256GB SSD</option>
+                    <option value="512GB SSD">512GB SSD</option>
+                    <option value="1TB SSD">1TB SSD</option>
+                    <option value="2TB SSD">2TB SSD</option>
+                    <option value="2TB HDD">2TB HDD</option>
+                    <option value="4TB SSD">4TB SSD</option>
+                </select>
+                <div class="quantity-container">
+                    <button type="button" class="quantity-modify decrease" data-target="storageQuantity">-</button>
+                    <input type="number" class="quantity-input" id="storageQuantity" name="storageQuantity" value="1" min="1">
+                    <button type="button" class="quantity-modify increase" data-target="storageQuantity">+</button>
+                </div>
+            </div>
+            <div class="wrap">
+                <h4 for="Request">Additional Request</h4>
+                <textarea id="comments" name="comments" rows="4" placeholder="Enter any additional Request"></textarea>
+
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <div id="orderSummary" class="summary">
+            <h2>Summary</h2>
+            <p id="summaryText"></p>
+        </div>
+    </div>
+    
+    <script src="scripts.js"></script>
+</body>
+</html>
